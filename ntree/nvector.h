@@ -47,10 +47,27 @@ public:
 		return *this;
 	}
 
+	NVector<T, TDim>& operator-=(NVector<T, TDim> rhs) {
+		spdlog::debug("two vectors with {0} dimensions added", TDim);
+		for (int i = 0; i < TDim; i++) {
+			coords[i] -= rhs.coords[i];
+		}
+
+		return *this;
+	}
+
 	NVector<T, TDim>& operator*=(T rhs) {
 		spdlog::debug("vector with {0} dimensions added multiplied by {1}", TDim, rhs);
 		for (int i = 0; i < TDim; i++) {
 			coords[i] *= rhs;
+		}
+		return *this;
+	}
+
+	NVector<T, TDim>& operator/=(T rhs) {
+		spdlog::debug("vector with {0} dimensions added multiplied by {1}", TDim, rhs);
+		for (int i = 0; i < TDim; i++) {
+			coords[i] /= rhs;
 		}
 		return *this;
 	}
