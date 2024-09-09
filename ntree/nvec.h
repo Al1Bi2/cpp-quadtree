@@ -46,3 +46,31 @@ public:
     std::array<T, dimT> coord;
 
 };
+
+template< typename T,size_t dimT>
+nVector<T,dimT> operator+(nVector<T,dimT>& a, nVector<T,dimT>& b){
+    nVector<T,dimT> result;
+    for(int i = 0; i < dimT; i++){
+        result[i] = a[i] + b[i];
+    }
+    return result;
+}
+
+template< typename T,size_t dimT>
+nVector<T,dimT> operator-(nVector<T,dimT>& a, nVector<T,dimT>& b){
+    nVector<T,dimT> result;
+    for(int i = 0; i < dimT; i++){
+        result[i] = a[i] - b[i];
+    }
+    return result;
+}
+
+template< typename T,size_t dimT>
+nVector<T,dimT> operator*(nVector<T,dimT>& a, T b){
+    return a *= b;
+}
+template< typename T,size_t dimT>
+nVector<T,dimT> operator/(nVector<T,dimT>& a, T b){
+    return a /= b;
+}
+

@@ -30,6 +30,9 @@
 *.exe
 *.out
 *.app
-/.vscode
+
+#all optional folders except tasks.json to run program
+/.vscode/*
+!.vscode/tasks.json
 /out
 /.vs
