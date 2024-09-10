@@ -4,7 +4,7 @@
 		{
 			"type": "shell",
 			"label": "Build ntree lib",
-			"command": "g++ -c ${workspaceFolder}/ntree/nbox.cpp -o ${workspaceFolder}/ntree/nbox.o -std=c++20 ;; ar rvs  ${workspaceFolder}/ntree/libNtree.a ${workspaceFolder}/ntree/nbox.o ",
+			"command": "g++ -c ${workspaceFolder}/ntree/ntree.cpp -o ${workspaceFolder}/ntree/ntree.o -std=c++20 ;; ar rvs  ${workspaceFolder}/ntree/libNtree.a ${workspaceFolder}/ntree/ntree.o ",
 			"presentation": {
                 "reveal": "always",
                 "panel": "shared"
